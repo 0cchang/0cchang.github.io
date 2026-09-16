@@ -39,9 +39,27 @@ Then, run Next.js in development mode:
 pnpm dev
 ```
 
-### Spotify currently playing
+### Updating book notes
 
-The homepage can show the track currently playing on your Spotify account. Create an app in the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard), then add these values to a local `.env.local` file:
+The current reading diary is stored in [`app/books/data.ts`](./app/books/data.ts). To add or update a chapter, edit the matching book’s `chapters` array, then run the site locally to preview it:
+
+```bash
+pnpm dev
+```
+
+When the notes look right, commit and push the update:
+
+```bash
+git add app/books/data.ts
+git commit -m "Update Hamming reading notes"
+git push origin main
+```
+
+Vercel automatically redeploys the production site after the push. If you are working on a feature branch, push that branch and merge it into `main` when ready.
+
+### Spotify listening
+
+The homepage can show your top artists and recently played songs. Create an app in the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard), then add these values to a local `.env.local` file:
 
 ```bash
 SPOTIFY_CLIENT_ID=your-client-id

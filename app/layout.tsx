@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     template: '%s | Caleb Chang',
   },
   description: 'Caleb Chang is a software engineer and researcher studying computer science at the University of Maryland.',
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: 'Caleb Chang',
     description: 'Software engineer and researcher.',
@@ -47,7 +52,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
+        'text-violet-950 bg-violet-50 dark:text-violet-50 dark:bg-violet-950',
         GeistSans.variable,
         GeistMono.variable
       )}

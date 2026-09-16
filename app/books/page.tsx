@@ -11,7 +11,7 @@ export default function BooksPage() {
     <section>
       <h1 className="mb-3 text-2xl font-semibold tracking-tight">Books</h1>
       <p className="mb-8 text-neutral-600 dark:text-neutral-300">
-        Reading notes, organized by book and chapter.
+        Reading notes for each chapter of the book I am currently reading.
       </p>
       <div className="space-y-5">
         {books.map((book) => (

@@ -8,23 +8,13 @@ export type Book = {
 
 export const books: Book[] = [
   {
-    title: 'Designing Data-Intensive Applications',
-    author: 'Martin Kleppmann',
+    title: 'The Art of Doing Science and Engineering',
+    author: 'Richard Hamming',
     status: 'Reading',
-    note: 'Distributed systems, reliability, and the trade-offs behind modern data platforms.',
+    note: 'Richard Hamming’s reflections on solving important problems, doing creative work, and becoming a better technical thinker.',
     chapters: [
-      { title: 'Chapter 1: Reliable, Scalable, and Maintainable Applications', notes: 'Add notes as you read.' },
-      { title: 'Chapter 2: Data Models and Query Languages', notes: 'Add notes as you read.' },
-    ],
-  },
-  {
-    title: 'The Pragmatic Programmer',
-    author: 'David Thomas and Andrew Hunt',
-    status: 'Read',
-    note: 'Notes on building software deliberately, communicating clearly, and improving continuously.',
-    chapters: [
-      { title: 'Chapter 1: A Pragmatic Philosophy', notes: 'Add notes from this chapter.' },
-      { title: 'Chapter 2: A Pragmatic Approach', notes: 'Add notes from this chapter.' },
+      { title: 'Chapter 1', notes: 'Add notes as you read.' },
+      { title: 'Chapter 2', notes: 'Add notes as you read.' },
     ],
   },
 ]

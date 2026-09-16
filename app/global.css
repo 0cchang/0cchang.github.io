@@ -1,11 +1,12 @@
 @import 'tailwindcss';
 
 ::selection {
-  background-color: #47a3f3;
+  background-color: #8b5cf6;
   color: #fefefe;
 }
 
 :root {
+  --page-accent: #7c3aed;
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
   --sh-sign: #8996a3;
@@ -31,6 +32,17 @@
 
 html {
   min-width: 360px;
+  background: #f5f3ff;
+}
+
+a {
+  color: var(--page-accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #1e1238;
+  }
 }
 
 .prose .anchor {
