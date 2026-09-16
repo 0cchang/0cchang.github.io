@@ -39,4 +39,16 @@ Then, run Next.js in development mode:
 pnpm dev
 ```
 
+### Spotify currently playing
+
+The homepage can show the track currently playing on your Spotify account. Create an app in the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard), then add these values to a local `.env.local` file:
+
+```bash
+SPOTIFY_CLIENT_ID=your-client-id
+SPOTIFY_CLIENT_SECRET=your-client-secret
+SPOTIFY_REFRESH_TOKEN=your-refresh-token
+```
+
+The refresh token must be created with the `user-read-currently-playing` scope. Restart `pnpm dev` after changing environment variables.
+
 Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
