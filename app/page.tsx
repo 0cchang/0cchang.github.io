@@ -60,18 +60,11 @@ const projects = [
 
 const books = [
   {
-    title: 'Designing Data-Intensive Applications',
-    author: 'Martin Kleppmann',
+    title: 'The Art of Doing Science and Engineering',
+    author: 'Richard Hamming',
     status: 'Reading',
-    slug: 'designing-data-intensive-applications',
-    note: 'Distributed systems, reliability, and the trade-offs behind modern data platforms.',
-  },
-  {
-    title: 'The Pragmatic Programmer',
-    author: 'David Thomas and Andrew Hunt',
-    status: 'Read',
-    slug: 'the-pragmatic-programmer',
-    note: 'Notes on building software deliberately, communicating clearly, and improving continuously.',
+    slug: 'the-art-of-doing-science-and-engineering',
+    note: 'Reflections on solving important problems, doing creative work, and becoming a better technical thinker.',
   },
 ]
 
@@ -88,15 +81,15 @@ export default function Page() {
     <section className="space-y-14">
       <header className="space-y-4">
         <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
-          Caleb Chang · Software engineer and researcher
+          Software engineer and researcher
         </p>
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-          Building reliable systems and learning in public.
+          Caleb Chang
         </h1>
         <p className="max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-300">
-          I&apos;m a computer science graduate student at the University of
-          Maryland, College Park. I work across backend systems, security,
-          applied math, and the ideas that make software more useful.
+          I&apos;m a computer science masters student at the University of
+          Maryland, College Park. I have big ideas and want to contribute to the world.
+
         </p>
         <p className="text-sm text-neutral-500 dark:text-neutral-400">
           <a className="underline underline-offset-4" href="mailto:calebschang13@gmail.com">
@@ -109,7 +102,7 @@ export default function Page() {
       <ListeningSummary />
 
       <section>
-        <SectionHeading>Books I&apos;m reading and have read</SectionHeading>
+        <SectionHeading>Currently reading</SectionHeading>
         <div className="grid gap-4 sm:grid-cols-2">
           {books.map((book) => (
             <Link
