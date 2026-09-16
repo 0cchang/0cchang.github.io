@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { NowPlaying } from 'app/components/now-playing'
+import { ListeningSummary } from 'app/components/listening-summary'
 
 const experience = [
   {
@@ -106,7 +106,7 @@ export default function Page() {
         </p>
       </header>
 
-      <NowPlaying />
+      <ListeningSummary />
 
       <section>
         <SectionHeading>Books I&apos;m reading and have read</SectionHeading>

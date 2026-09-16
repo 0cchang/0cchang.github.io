@@ -49,6 +49,18 @@ SPOTIFY_CLIENT_SECRET=your-client-secret
 SPOTIFY_REFRESH_TOKEN=your-refresh-token
 ```
 
-The refresh token must be created with the `user-read-currently-playing` scope. Restart `pnpm dev` after changing environment variables.
+Generate the refresh token locally so your production website never handles Spotify authorization. Add this exact redirect URI to your Spotify app:
+
+```text
+http://127.0.0.1:8888/callback
+```
+
+Create a local `.env` file with your client credentials, then run:
+
+```bash
+SPOTIFY_CLIENT_ID=your-client-id SPOTIFY_CLIENT_SECRET=your-client-secret node scripts/spotify-auth.mjs
+```
+
+Open the URL printed in the terminal, approve the `user-read-currently-playing`, `user-top-read`, and `user-read-recently-played` scopes, and copy the refresh token printed by the script into Vercel as `SPOTIFY_REFRESH_TOKEN`. Generate a new token after changing scopes. Do not commit `.env` or the token.
 
 Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
