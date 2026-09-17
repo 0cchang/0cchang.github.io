@@ -18,7 +18,7 @@ const experience = [
     location: 'Seattle, WA',
     slug: 'amazon-backend-service',
     summary:
-      'Expanded a core backend service with AWS Lambda, SQS, S3, and production telemetry.',
+      'Expanded a core backend service for order documentation',
   },
   {
     company: 'Risk Informed Solutions in Engineering Lab',
@@ -27,7 +27,7 @@ const experience = [
     location: 'College Park, MD',
     slug: 'bayesfusion-graph-conversion',
     summary:
-      'Improved BayesFusion data conversion and helped onboard researchers to the lab platform.',
+      'Improved BayesFusion data conversion',
   },
 ]
 
@@ -38,7 +38,7 @@ const projects = [
     date: 'March 2026',
     slug: 'head-related-transfer-function-research',
     summary:
-      'Automated ear-geometry extraction from head-scan datasets and evaluated 3D audio metrics.',
+      'Created directional audio game to test efficacy of HRTF personalization',
   },
   {
     title: 'Multi-turn Agent',
@@ -64,7 +64,7 @@ const books = [
     author: 'Richard Hamming',
     status: 'Reading',
     slug: 'the-art-of-doing-science-and-engineering',
-    note: 'Reflections on solving important problems, doing creative work, and becoming a better technical thinker.',
+    note: '',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function Page() {
         </h1>
         <p className="max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-300">
           I&apos;m a computer science masters student at the University of
-          Maryland, College Park. I have big ideas and want to contribute to the world.
+          Maryland, College Park. My current classes are in NLP and cybersecurity.
 
         </p>
         <p className="text-sm text-neutral-500 dark:text-neutral-400">
