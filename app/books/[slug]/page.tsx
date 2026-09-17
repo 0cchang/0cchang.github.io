@@ -7,13 +7,23 @@ export function generateStaticParams() {
   }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const book = books.find((item) => item.title.toLowerCase().replaceAll(' ', '-') === params.slug)
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const book = books.find((item) => item.title.toLowerCase().replaceAll(' ', '-') === slug)
   return book ? { title: book.title, description: `Reading diary for ${book.title}.` } : undefined
 }
 
-export default function BookDiary({ params }: { params: { slug: string } }) {
-  const book = books.find((item) => item.title.toLowerCase().replaceAll(' ', '-') === params.slug)
+export default async function BookDiary({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const book = books.find((item) => item.title.toLowerCase().replaceAll(' ', '-') === slug)
   if (!book) notFound()
 
   return (

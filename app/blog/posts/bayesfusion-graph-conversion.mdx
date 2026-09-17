@@ -1,9 +1,17 @@
 ---
 title: 'Making BayesFusion data conversion practical'
-publishedAt: '2025-05-01'
+publishedAt: '2026-09-17'
 summary: 'How graph construction work reduced data conversion time and improved a research platform.'
 ---
 
-As a research assistant in the Risk Informed Solutions in Engineering Lab, I implemented a graph construction algorithm that reduced BayesFusion data conversion time by more than 99 percent.
+This one was a fun project because I was able to apply a basic graph algorithm into real life, at the time I just got into college, and I wasn't even in the CS program yet. 
+I knew that I was behind many applicants, and cold emailed many professors to see if I could get any project. One of them finally responded and it was in the Civil and Environmental engineering program.
+I met with her in the office and she showed me some problems I could work from. 
 
-This post will document the algorithmic approach, the constraints of the legacy codebase, and what I learned while onboarding researchers to the resulting platform.
+This project, involved converting data structures from being modeled in one software to another. Specifically fault trees which was the original strucure, to bayesian graphs.
+I had no real background in Civil Engineering and learned about the business requirements from one of her PHD students. 
+
+I created the parser to read the original fault tree files, then implemented a DFS algorithm to map them in java, then from the object I would DFS again to output the correct bayesian grpah.
+
+I think nowadays this project would be done in 2 prompts, but doing it all by hand especially as a complete newbie helped me alot. 
+I would encourage new students to email professors and their PHD students, at least one of them would be supportive enough to bring you in.

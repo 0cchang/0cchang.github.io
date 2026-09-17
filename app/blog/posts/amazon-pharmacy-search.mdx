@@ -1,9 +1,58 @@
 ---
 title: 'Building search for Amazon Pharmacy order history'
-publishedAt: '2026-08-01'
-summary: 'A closer look at building a full-stack search experience for a high-traffic order history page.'
+publishedAt: '2026-09-17'
+summary: 'Amazon SWE return experience + my summer experience.'
 ---
 
-During my summer in Austin, I worked on full-stack search functionality for the Amazon Pharmacy order history page. The feature was designed for a large customer base, so I focused on clear contracts between the frontend and backend, predictable query behavior, and an experience that remained useful as order histories grew.
+This internship was one of my greatest learning experiences ever. 
+Read if you are interested on a real look at an amazon SWE internship.
 
-This is where I will write about the design decisions, testing strategy, and lessons from shipping the feature.
+To set the scene, my team consisted of only 5 people and my mentor had been locked down on another 6 month project. 
+When I walked in the office first day, my final project was not fully decided yet. 
+During the first meeting, my mentor and manager were disagreeing on the scope and if this project was even possible as an intern. 
+The person that owned the services I was touching planned to officially leave the team just 2 weeks after I joined, meaning that both my manager and mentor did not have context on the project.
+The third week, my mentor got his break and took 1 week off, and my manager also had a vacation planned.
+I was stuck with half of a project but decided that I would at least try to pass the design review without my mentors approval. 
+This did not work out well, the senior engineer rejected the proposal, even though my manager tried to advocate for some leniency because I was an intern.
+However, this is just not how Amazon culture is. The bar is the bar, every contribution needs quality thought, I just need the help getting there.
+I wasn't really worried at this point, if anything I am ahead of schedule compared to last year where I started coding after the midpoint, I was able to start coding earlier anyway.
+
+This is where I started to run into some issues. 
+1. I overestimated the capabilites of the AI code tool
+2. I did not make the considerations that a software engineer would make
+
+I think both of those issues were hand in hand. Since the engineers have had these tools for some time now, they understand that they can work alot more efficiently.
+They assumed that the scale would also apply to me. Someone who used a version of the tool 1 year ago for 3 months.
+An implicit prerequisite of this project would be that I would design the entire system, which included the data pipeline, search engine and new API.
+All of this would be done in the context of Pharmacy, so we are dealing with private health information, and need to comply to HIPAA, which added alot more complexity that I anticipated.
+
+For context, in my previous project, the system design was basically handed to me, I can present the pros and cons of choosing different technology. Also, the scope was exactly half of the scope of the project.
+My only concern was the data pipeline, no need to design an API on top of that.
+
+At the time, these considerations were completely out of my sight. Soon I would be  punished. 
+
+After making some code reviews that were getting too many revisions, my mentor finally had a good picture of where I was at.
+The issue was not the correctness of the code. In fact, I asked and he answered, "I am not looking for if your code works". 
+
+The issue is that I did not read into how each piece of the system is meant to operate. 
+I had some idea of abstraction that would get me through the intro to OOP courses, but in enterprise it was not flying.
+
+He one day sat in a meeting with me and enlightened me on how the abstraction is meant to be, depedency injection, etc... many standard coding practices that I was completely ignoring, thinking that the AI would do it for me.
+This process worked and each code review I would catch more mistakes I wouldn't see before. 
+Eventually, the code reviews I were making were going through without need for revision, the clarity in the descriptions and the way I cut up the changes made development smooth. 
+Even though in the final month i was behind by 2-3 milestones, By the time of my final presentation, I could present my stretch goal.
+
+After my presentation, he said to me that 1 month ago, I would not have given you the inclined vote, but because of the potential and the quality of the presentation. They voted in my favor.
+Now its up to HR to see if I can stay.
+
+Despite all of the work, I still had a great summer.
+I drove 3000 miles round trip Washington DC to Austin.
+I walked around Nashville's honky tonk street. 
+Flew to SF to visit my friends around July 4th, got to experience the chaos and make new friends.
+
+Then right after went with the team on a site visit to Seattle also visting more friends. 
+That plane ticket cost the Amazon Travel Card 700$ and I asked to be included maybe 2 days before the flights, this gesture honeslty changed my attitude ot the team alot, and might have been the key point in truly owning my development.
+
+I am priviledged to have this kind of summer, I can learn make mistakes, and enjoy the present.
+
+
