@@ -92,8 +92,8 @@ export default function Page() {
 
         </p>
         <p className="text-sm text-neutral-500 dark:text-neutral-400">
-          <a className="underline underline-offset-4" href="mailto:calebschang13@gmail.com">
-            calebschang13@gmail.com
+          <a className="underline underline-offset-4" href="https://www.linkedin.com/in/cchang22/">
+            LinkedIn
           </a>{' '}
           · Potomac, MD
         </p>
