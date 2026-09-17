@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   },
   description: 'Caleb Chang is a software engineer and researcher studying computer science at the University of Maryland.',
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    icon: '/amumu.jpg',
+    shortcut: '/amumu.jpg',
+    apple: '/amumu.jpg',
   },
   openGraph: {
     title: 'Caleb Chang',
