@@ -82,3 +82,39 @@ SPOTIFY_CLIENT_ID=your-client-id SPOTIFY_CLIENT_SECRET=your-client-secret node s
 Open the URL printed in the terminal, approve the `user-read-currently-playing`, `user-top-read`, and `user-read-recently-played` scopes, and copy the refresh token printed by the script into Vercel as `SPOTIFY_REFRESH_TOKEN`. Generate a new token after changing scopes. Do not commit `.env` or the token.
 
 Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+
+### Videos
+
+The Videos tab uses YouTube embeds. This keeps video storage, transcoding,
+adaptive streaming, thumbnails, and bandwidth off the Vercel deployment.
+Upload a video to YouTube, choose **Public** or **Unlisted**, and copy the ID
+from its URL:
+
+```text
+https://www.youtube.com/watch?v=VIDEO_ID
+```
+
+Register the ID in [`app/videos/data.ts`](./app/videos/data.ts):
+
+```ts
+export const videos = [
+  {
+    title: 'My demo',
+    description: 'A short description.',
+    youtubeId: 'VIDEO_ID',
+    publishedAt: 'October 2026',
+  },
+]
+```
+
+Commit and deploy the catalog change to Vercel:
+
+```bash
+git add app/videos/data.ts
+git commit -m "Add demo video"
+git push
+```
+
+The site uses YouTube’s privacy-enhanced `youtube-nocookie.com` embed domain.
+Unlisted videos will not appear in YouTube search, but anyone with the link can
+watch them. Private videos cannot be embedded for public visitors.
