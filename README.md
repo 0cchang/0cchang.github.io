@@ -1,4 +1,4 @@
-# Portfolio Blog Starter
+# Caleb Chang's Personal Website
 
 This is a porfolio site template complete with a blog. Includes:
 
@@ -10,6 +10,20 @@ This is a porfolio site template complete with a blog. Includes:
 - Tailwind v4
 - Vercel Speed Insights / Web Analytics
 - Geist font
+
+## GitHub Pages deployment
+
+This site is configured for a static export and deploys automatically through
+[`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml).
+
+To use the user-site URL `https://0cchang.github.io`, rename the GitHub
+repository to `0cchang.github.io`, then enable **Settings → Pages → GitHub
+Actions** as the build and deployment source. Pushes to `main` will build the
+site and publish the generated `out` directory.
+
+The Spotify listening section requires a server runtime and is hidden on the
+static GitHub Pages deployment. The rest of the site, including blog posts,
+book notes, videos, RSS, sitemap, and robots metadata, is statically generated.
 
 ## Demo
 

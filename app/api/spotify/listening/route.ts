@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { getSpotifyAccessToken } from 'app/lib/spotify'
 
+export const dynamic = 'force-static'
+
 export async function GET() {
   const accessToken = await getSpotifyAccessToken()
   if (!accessToken) return NextResponse.json({ isConfigured: false })
