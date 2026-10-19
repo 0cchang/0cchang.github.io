@@ -12,7 +12,7 @@ export function ListeningSummary() {
   const [summary, setSummary] = useState<ListeningSummary | null>(null)
 
   useEffect(() => {
-    fetch('/api/spotify/listening')
+    fetch('/spotify/listening.json')
       .then((response) => {
         if (!response.ok) throw new Error(`Listening request failed with status ${response.status}`)
         return response.json() as Promise<ListeningSummary>

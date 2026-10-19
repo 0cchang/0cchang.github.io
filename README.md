@@ -80,8 +80,16 @@ Open the URL printed in the terminal and approve the required scopes. Copy
 the refresh token into `.env.local` as `SPOTIFY_REFRESH_TOKEN`. Generate a new
 token after changing scopes. Do not commit `.env` or the token.
 
-Spotify listening data is not available on the static GitHub Pages deployment
-because it requires a server runtime.
+Spotify listening data is fetched during each GitHub Actions build and published
+as a static JSON file. Add these repository secrets under **Settings → Secrets
+and variables → Actions** to enable it:
+
+- `SPOTIFY_CLIENT_ID`
+- `SPOTIFY_CLIENT_SECRET`
+- `SPOTIFY_REFRESH_TOKEN`
+
+The workflow publishes an empty summary when these secrets are not configured,
+so the rest of the site can still deploy.
 
 ### Videos
 
