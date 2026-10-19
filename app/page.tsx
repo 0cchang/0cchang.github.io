@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { ListeningSummary } from 'app/components/listening-summary'
 
 const experience = [
   {
@@ -98,8 +97,6 @@ export default function Page() {
           · Potomac, MD
         </p>
       </header>
-
-      <ListeningSummary />
 
       <section>
         <SectionHeading>Currently reading</SectionHeading>
